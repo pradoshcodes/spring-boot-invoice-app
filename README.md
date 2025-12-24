@@ -27,7 +27,5 @@ This application allows users to create invoices and download them in **PDF** an
 - iText (PDF generation)
 - OpenCSV (CSV generation)
 
----
 
-## 📁 Project Structure
 
