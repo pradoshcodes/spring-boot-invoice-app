@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Invoice</title>
+</head>
+<body>
+
+<h2>Invoice Generated</h2>
+
+<p>Customer: <b th:text="${invoice.customerName}"></b></p>
+<p>Product: <b th:text="${invoice.productName}"></b></p>
+<p>Quantity: <b th:text="${invoice.quantity}"></b></p>
+<p>Price: <b th:text="${invoice.price}"></b></p>
+
+<hr>
+
+<p>Total Amount: <b th:text="${invoice.totalAmount}"></b></p>
+
+<a th:href="@{/invoice/pdf(
+    customerName=${invoice.customerName},
+    productName=${invoice.productName},
+    quantity=${invoice.quantity},
+    price=${invoice.price}
+)}">
+	Download PDF
+	</a>
+
+<br><br>
+
+<a th:href="@{/invoice/csv(
+    customerName=${invoice.customerName},
+    productName=${invoice.productName},
+    quantity=${invoice.quantity},
+    price=${invoice.price}
+)}">
+	Download CSV
+	</a>
+
+</body>
+</html>

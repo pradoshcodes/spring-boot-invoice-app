@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Invoice</title>
+</head>
+<body>
+
+<h2>Create Invoice</h2>
+
+<form action="/generate-invoice" method="post">
+
+    Customer Name:
+    <input type="text" name="customerName" required><br><br>
+
+    Product Name:
+    <input type="text" name="productName"><br><br>
+
+    Quantity:
+    <input type="number" name="quantity"><br><br>
+
+    Price:
+    <input type="number" name="price"><br><br>
+
+    <button type="submit">Generate Invoice</button>
+
+</form>
+
+</body>
+</html>
